@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Login</title>
+</head>
+<h:body>
+	<h:form action="Livros.xhtml">
+		<h:messages />
+		<h:panelGrid columns="2">
+			<h:outputText value="Usuário: " />
+			<h:inputText id="usuario" value="${LoginMB.login.usuario}" />
+			<h:outputText value="Senha: " />
+			<h:inputSecret id="senha" value="${LoginMB.login.usuario}"
+				ValidatorMessage="o valor dever ser maior 5 que e menor que 20" />
+
+			<!-- 	<f:validatorMessage minimum = "4" maximum = "40" /> <h:inputSecret/> <h:message for = "senha" />  -->
+			<h:commandButton value="Logar" />
+
+		</h:panelGrid>
+	</h:form>
+
+</h:body>
+</html>
